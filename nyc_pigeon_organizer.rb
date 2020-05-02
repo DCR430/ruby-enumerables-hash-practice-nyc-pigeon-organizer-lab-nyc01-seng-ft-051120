@@ -5,11 +5,11 @@ def nyc_pigeon_organizer(pigeon_data) #begining of method , "data" is the parame
     value.each do |new_value, names|# the argument "value" will be looped thru via the .each method, looping thru "new_value" and "names" in the hash
       names.each do |name| # the argument "names" will be looped thru via the .each method, looping thru the "name" in the hash
 
-        if new_hash[name]
+        if !new_hash[name]
           new_hash[name] = {}
         end
 
-        if new_hash[name][key]
+        if !new_hash[name][key]
           new_hash[name][key] = []
         end
 
